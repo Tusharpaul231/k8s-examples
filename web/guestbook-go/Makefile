@@ -25,7 +25,7 @@ release: clean build push clean
 build:
 	docker buildx build --load -t ${REGISTRY}/guestbook:${VERSION} .
 
-# push the image to an registry
+# push the image to a registry
 push:
 	docker buildx build --push -t ${REGISTRY}/guestbook:${VERSION} .
 
